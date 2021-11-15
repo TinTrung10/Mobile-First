@@ -149,7 +149,7 @@ max-width: 100%;
 /* MOBILE FIRST (via Flexbox) */
 
 /* 1. Mobile enheder (begynd her) */
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 400px) {
   /* Menu */
 
   /* vis burger */
