@@ -5,6 +5,7 @@
 /* Reset: Meyer Style */
 /* fjerner default browser styles */
 @import 'reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 
 * {
   /* padding inkluderes i bredden med border-box */
@@ -23,6 +24,7 @@
   /* fonte */
   --overskrift: 'Brush Script MT', cursive;
   --broedtekst: Helvetica, sans-serif;
+  --tekst: 'Nunito', sans-serif;
 
   /* whitespace */
   --whitespace: 2rem;
@@ -89,30 +91,23 @@ footer {
   margin-bottom: 20px;
 }
 
-nav ul,
-footer ul {
+nav ul{
   display: flex; /* horisontal menu */
   justify-content: center;
+  line-height: 2;
+  font-size: 30px;
+  margin-top: 80px;
+  font-family: var(--tekst);
+  font-weight: bold;
 }
 
-nav ul li,
-footer ul li {
-  margin-right: 4ch;
-}
-
-nav a,
-footer {
+nav a {
   color: var(--white);
   text-decoration: none;
 }
 
 main {
   background-image: url("../images/baggrund.png");
-}
-/* Footer */
-footer {
-  width: 100%;
-  margin-bottom: 0px; /* fordi: nedarver 20px fra nav,footer */
 }
 
 /* Sections (højde == skærmhøjde) */
@@ -128,9 +123,9 @@ img {
 /* MOBILE FIRST (via Flexbox) */
 
 /* 1. Mobile enheder (begynd her) */
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 400px) {
   body {
-    background-color: var(--roed);
+    background-image: url("../images/baggrund.png");
   }
   /* Menu */
 
