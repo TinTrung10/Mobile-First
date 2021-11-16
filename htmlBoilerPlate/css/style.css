@@ -89,7 +89,7 @@ nav ul{
   display: block;
 }
 
-nav a {
+.menuside a {
   color: var(--white);
   font-family: var(--tekst);
   line-height: 4;
@@ -117,8 +117,13 @@ img {
 .menulogo{
   width: 50%;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 80px;
   opacity: 0.9;
+}
+
+.startside{
+  width: 30%;
+  margin: auto;
 }
 /* MOBILE FIRST (via Flexbox) */
 

@@ -187,7 +187,9 @@ div.gallery img {
 /* 1. Mobile enheder (begynd her) */
 @media only screen and (max-width: 400px) {
   /* Menu */
-
+  .startside{
+    display: none;
+  }
   /* vis burger */
   #showMenu {
     display: block;
