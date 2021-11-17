@@ -5,6 +5,8 @@
 /* Reset: Meyer Style */
 /* fjerner default browser styles */
 @import 'reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
 
 * {
   /* padding inkluderes i bredden med border-box */
@@ -16,9 +18,11 @@
   /* farver */
   --dark: #190604;
   --white: #ffffff;
+  --green: #007534;
 
   /* fonte */
   --broedtekst: Helvetica, sans-serif;
+  --tekst: 'Nunito', sans-serif;
 
   /* whitespace */
   --whitespace: 2rem;
@@ -228,58 +232,124 @@ Research:
   Husk, at iPads kan vendes! Lav CSS for både stående og liggende enhed
   */
   #wrap {
-    max-width: 700px; /* Holder designet til max 700px */
+    max-width: 1024px; /* Holder designet til max 700px */
     margin:auto;
   }
 
   /* Menu */
+  nav {
+    height: 250px;
+  }
+
+  li{
+    display: inline;
+    font-weight: bolder;
+    color: var(--white);
+    font-size: 1px;
+  }
+
+  nav ul li{
+    margin-right: 2ch;
+    margin-left: 2ch;
+  }
+
+  #menu{
+    padding: 10px;
+    width: 100%;
+    background-color: var(--green);
+    position: absolute;
+    margin-top: 145px;
+  }
+
+  #menu a{
+    color: var(--white);
+    font-family: var(--tekst);
+  }
+
+  .startside{
+    width: 20%;
+  }
+
+  .logo{
+    width: 10%;
+    margin-left: 440px;
+    margin-top: -100px;
+  }
+
+  .kurv{
+    width: 12%;
+    margin-left: 850px;
+    margin-top: -60px;
+  }
+
+  .søg{
+    width: 6.5%;
+    margin-left: 760px;
+    margin-top: -60px;
+  }
+  /* footer */
+  .footer {
+    padding: 5px 6px;
+    float: left;
+    width: 33.33333%;
+  }
+
+  div.box {
+    background-color: white;
+    opacity: 70%;
+    border: 15px solid white;
+    margin: auto;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    line-height: 1.5;
+    width: 90%;
+    height: 300px;
+  }
+
+  footer{
+    height: 380px;
+  }
+
+
   /* vis burger */
   #showMenu {
-    display: block;
+    display: none;
   }
 
   /* skjul menu og burgermenu */
   #menu,
   #burgerMenu {
-    display: none;
+    display: block;
+  }
+  /* Typografi */
+  div.tekstbox p {
+    font-family: var(--broedtekst);
+    color: var(--dark);
+    margin: var(--whitespace) var(--whitespace);
+    padding-bottom: var(--whitespace);
+    font-size: 3em;
+    line-height: 1.5;
+    font-weight: bolder;
+    max-width: 60ch;
+    text-align: left;
+    position: absolute;
+    transform: translate(1%, -122%);
   }
 
-  /* --- Flexbox (responsivt flex) --- */
-  main {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px; /* ny funktion! */
-    /* gap er ikke implementeret i alle browsere
-      fx virker det ikke i atoms preview ...
-     */
+  /* jyllandspost */
+  .jyllandspost img{
+    width: 50%;
   }
 
-  /* Forklaring:
-  main > * betyder: for alle "børn" af main { ... css her  ...}
-  Se disse tutorials
-
-  @url: https://flexbox-pattern-cheatsheet.kevinpowell.co/
-  @url: https://www.w3schools.com/cssref/css3_pr_flex.asp
-   */
-  main > * {
-    flex: 1 1 32ch;
+  .artikel img{
+    width: 100%;
   }
-  /*
-  Forkortelsen 'flex' kan sætte flere værdier på en gang.
-  Mere om anvendelsen af flex her:
-  @url: https://developer.mozilla.org/en-US/docs/Web/CSS/flex
-
-  Fx: Three values: flex-grow | flex-shrink | flex-basis
-  flex: 2 2 10%;
-
-  Alternativt bruges box sizing, se
-  @url: https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
-  */
 
 }
 
 /* 3. Stor skærm (slut her) */
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 1920px) {
   body {
     background-color: var(--dark);
     color: var(--white);

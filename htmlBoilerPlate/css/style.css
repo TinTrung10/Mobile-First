@@ -17,9 +17,6 @@
   /* farver */
   --dark: #190604;
   --white: #ffffff;
-  --brun: #a86c12;
-  --groen: #99a812;
-  --roed: #a82112;
 
   /* fonte */
   --overskrift: 'Brush Script MT', cursive;
@@ -129,8 +126,7 @@ img {
 
 /* 1. Mobile enheder (begynd her) */
 @media only screen and (max-width: 400px) {
-  body {
-  }
+
   /* Menu */
 
   /* vis burger */
@@ -141,6 +137,18 @@ img {
   /* skjul menu og burgermenu */
   #menu,
   #burgerMenu {
+    display: none;
+  }
+
+  #jazzbar-tablet {
+    display: none;
+  }
+
+  #flaskebutik-tablet {
+    display: none;
+  }
+
+  #logo-tablet{
     display: none;
   }
 
@@ -158,15 +166,13 @@ img {
 Research:
 * iPad width > 321px
 */
-@media only screen and (min-width: 321px) {
-  body {
-  }
+@media only screen and (min-width: 401px) {
   /* Flexbox: design efter skitser */
   /*
   Husk, at iPads kan vendes! Lav CSS for både stående og liggende enhed
   */
   #wrap {
-    max-width: 700px; /* Holder designet til max 700px */
+    max-width: 1024px; /* Holder designet til max 700px */
     margin:auto;
   }
 
@@ -182,42 +188,48 @@ Research:
     display: none;
   }
 
-  /* --- Flexbox (responsivt flex) --- */
+  /* fuld bredde til øverste section: ; */
+  #aaa {
+    display: none;
+  }
+
+  #bbb {
+    display: none;
+  }
+
+  #jazzbar-tablet {
+    background: none;
+  }
+
+  #flaskebutik-tablet {
+    background: none;
+  }
+
+  #logo-tablet{
+    background: none;
+    position: absolute;
+    width: 22%;
+    transform: translate(0%,20%);
+  }
+
   main {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px; /* ny funktion! */
-    /* gap er ikke implementeret i alle browsere
-      fx virker det ikke i atoms preview ...
-     */
+    position: relative;
+    gap: 60px;
+    background: none;
+    max-width: 100%;
+    justify-content: center;
+    margin-top: 300px;
   }
 
-  /* Forklaring:
-  main > * betyder: for alle "børn" af main { ... css her  ...}
-  Se disse tutorials
-
-  @url: https://flexbox-pattern-cheatsheet.kevinpowell.co/
-  @url: https://www.w3schools.com/cssref/css3_pr_flex.asp
-   */
-  main > * {
-    flex: 1 1 32ch;
+  header{
+    display: none;
   }
-  /*
-  Forkortelsen 'flex' kan sætte flere værdier på en gang.
-  Mere om anvendelsen af flex her:
-  @url: https://developer.mozilla.org/en-US/docs/Web/CSS/flex
-
-  Fx: Three values: flex-grow | flex-shrink | flex-basis
-  flex: 2 2 10%;
-
-  Alternativt bruges box sizing, se
-  @url: https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
-  */
 
 }
 
 /* 3. Stor skærm (slut her) */
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 1920px) {
   body {
     background-color: var(--dark);
     color: var(--white);
@@ -241,8 +253,5 @@ Research:
     max-width: 80%;
     margin:auto;
   }
-  /* fuld bredde til øverste section: ; */
-  #aaa {
-    flex:100%;
-  }
+
 }
