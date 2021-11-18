@@ -6,7 +6,7 @@
 /* fjerner default browser styles */
 @import 'reset.css';
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Overlock+SC&display=swap');
 
 * {
   /* padding inkluderes i bredden med border-box */
@@ -22,7 +22,7 @@
 
 
   /* fonte */
-  --broedtekst: Helvetica, sans-serif;
+  --broedtekst: 'Dosis', sans-serif;
   --tekst: 'Nunito', sans-serif;
 
 
@@ -137,6 +137,11 @@ max-width: 100%;
   position: absolute;
   margin-left: 140px;
   margin-top: -60px;
+}
+
+.logo a{
+  padding: 0;
+  margin-left: 30px;
 }
 
 .søg{
@@ -308,10 +313,10 @@ Research:
     max-width: 60ch;
     text-align: left;
     position: absolute;
-    transform: translate(5%, -107%);
+    transform: translate(0%, -110%);
   }
   .tekstbox{
-    width: 100%;
+    width: 90%;
     margin: auto;
     padding: 50px;
   }
@@ -449,6 +454,26 @@ Research:
 
   .tilmelding{
     text-align: center;
+  }
+
+  /* Typografi */
+  div.tekstbox p {
+    font-family: var(--broedtekst);
+    color: var(--dark);
+    margin: var(--whitespace) var(--whitespace);
+    padding-bottom: var(--whitespace);
+    font-size: 1.4em;
+    line-height: 1.7;
+    font-weight: bolder;
+    max-width: 60ch;
+    text-align: left;
+    position: absolute;
+    transform: translate(5%, -120%);
+  }
+  .tekstbox{
+    width: 80%;
+    margin: auto;
+    padding: 50px;
   }
 
 }

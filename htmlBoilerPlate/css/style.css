@@ -229,29 +229,28 @@ Research:
 }
 
 /* 3. Stor skærm (slut her) */
-@media only screen and (min-width: 1920px) {
-  body {
-    background-color: var(--dark);
-    color: var(--white);
-  }
-
+@media only screen and (min-width: 1025px) {
   /* Skjuler burgeren */
   #showMenu {
     display: none;
   }
 
-  /* Viser menuen */
-  #menu {
-    display: block;
-  }
-  #menu li {
-    display: inline;
-  }
-
   /* Vises centreret i vinduet */
   #wrap {
-    max-width: 80%;
+    max-width: 1925px;
     margin:auto;
+  }
+
+  main{
+    margin: 0;
+  }
+
+  #logo-tablet img{
+    width: 70%;
+  }
+
+  #logo-tablet{
+    text-align:center;
   }
 
 }

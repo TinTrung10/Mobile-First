@@ -6,7 +6,7 @@
 /* fjerner default browser styles */
 @import 'reset.css';
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Overlock+SC&display=swap');
 
 * {
   /* padding inkluderes i bredden med border-box */
@@ -21,7 +21,7 @@
   --green: #007534;
 
   /* fonte */
-  --broedtekst: Helvetica, sans-serif;
+  --broedtekst: 'Dosis', sans-serif;
   --tekst: 'Nunito', sans-serif;
 
   /* whitespace */
@@ -56,7 +56,7 @@ div.tekstbox p {
   max-width: 35ch;
   text-align: left;
   position: absolute;
-  transform: translate(-5%, -115%);
+  transform: translate(-5%, -130%);
 }
 
 /* Smooth scroll */
@@ -97,7 +97,7 @@ footer {
   margin-top: 30px;
   background-image: url("../images/footer.baggrund.png");
   width: 100%;
-  height: 600px;
+  height: 550px;
   background-size: 100% 100%;
 }
 
@@ -140,6 +140,11 @@ max-width: 100%;
   position: absolute;
   margin-left: 140px;
   margin-top: -60px;
+}
+
+.logo a{
+  padding: 0;
+  margin-left: 30px;
 }
 
 .søg{
@@ -311,7 +316,6 @@ Research:
     height: 380px;
   }
 
-
   /* vis burger */
   #showMenu {
     display: none;
@@ -328,13 +332,13 @@ Research:
     color: var(--dark);
     margin: var(--whitespace) var(--whitespace);
     padding-bottom: var(--whitespace);
-    font-size: 3em;
+    font-size: 2.5em;
     line-height: 1.5;
     font-weight: bolder;
-    max-width: 60ch;
+    max-width: 40ch;
     text-align: left;
     position: absolute;
-    transform: translate(1%, -122%);
+    transform: translate(0%, -160%);
   }
 
   /* jyllandspost */
@@ -349,32 +353,123 @@ Research:
 }
 
 /* 3. Stor skærm (slut her) */
-@media only screen and (min-width: 1920px) {
-  body {
-    background-color: var(--dark);
-    color: var(--white);
-  }
-
+@media only screen and (min-width: 1025px) {
   /* Skjuler burgeren */
   #showMenu {
     display: none;
   }
 
-  /* Viser menuen */
-  #menu {
-    display: block;
-  }
-  #menu li {
-    display: inline;
-  }
 
   /* Vises centreret i vinduet */
   #wrap {
-    max-width: 80%;
+    max-width: 1925px;
     margin:auto;
   }
-  /* fuld bredde til øverste section: ; */
-  #aaa {
-    flex:100%;
+
+  /* Viser menuen */
+  nav {
+    width: 100%;
+    height: 191px;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
+
+  li{
+    display: inline;
+    font-weight: bolder;
+    color: var(--white);
+  }
+
+  nav ul li{
+    margin-right: 2ch;
+    margin-left: 2ch;
+  }
+
+  #menu{
+    display: block;
+    width: 100%;
+    background-color: var(--green);
+    position: absolute;
+    margin-top: 120px;
+    text-align: center;
+    letter-spacing: 2px;
+    overflow: auto;
+  }
+
+  #menu a{
+    color: var(--white);
+    font-family: var(--tekst);
+    font-size: 15px;
+    float: left;
+    width: 33%;
+    padding: 0;
+  }
+
+  .startside{
+    width: 5%;
+  }
+
+  .logo{
+    width: 7%;
+    margin-left: 550px;
+    margin-top: -65px;
+  }
+
+  .kurv{
+    width: 5%;
+    margin-left: 1100px;
+    margin-top: -20px;
+  }
+
+  .søg{
+    width: 2.8%;
+    margin-left: 1050px;
+    margin-top: -20px;
+  }
+  /* footer */
+  .footer {
+    padding: 5px 6px;
+    float: left;
+    width: 33.33333%;
+  }
+
+  div.box {
+    background-color: white;
+    opacity: 70%;
+    border: 15px solid white;
+    margin: auto;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    line-height: 1.5;
+    width: 90%;
+    height: 300px;
+  }
+
+  footer{
+    clear: both;
+    height: 380px;
+  }
+
+  /* Typografi */
+  div.tekstbox p {
+    font-family: var(--broedtekst);
+    color: var(--dark);
+    margin: var(--whitespace) var(--whitespace);
+    padding-bottom: var(--whitespace);
+    font-size: 2.5em;
+    line-height: 1.5;
+    font-weight: bolder;
+    max-width: 30ch;
+    text-align: left;
+    position: absolute;
+    transform: translate(10%, -130%);
+  }
+
+  div.tekstbox{
+    text-align: center;
+    width: 65%;
+  }
+
+
 }
