@@ -6,6 +6,7 @@
 /* fjerner default browser styles */
 @import 'reset.css';
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Overlock+SC&display=swap');
 
 * {
   /* padding inkluderes i bredden med border-box */
@@ -20,7 +21,7 @@
   --green: #007534;
 
   /* fonte */
-  --broedtekst: Helvetica, sans-serif;
+  --broedtekst: 'Dosis', sans-serif;
   --tekst: 'Nunito', sans-serif;
 
   /* whitespace */
@@ -308,10 +309,10 @@ div.tekstbox p {
   font-size: 2.2em;
   line-height: 1.7;
   font-weight: bolder;
-  max-width: 35ch;
+  max-width: 45ch;
   text-align: center;
   position: absolute;
-  transform: translate(12%, -107%);
+  transform: translate(0%, -150%);
 }
 
 .tekstbox{
@@ -325,7 +326,7 @@ h2{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 815%);
+  transform: translate(-50%, 840%);
   color: black;
   padding: 40px;
   font-size: 4em;
@@ -562,7 +563,7 @@ h2{
     max-width: 45ch;
     text-align: left;
     position: absolute;
-    transform: translate(15%, -130%);
+    transform: translate(15%, -160%);
   }
 
   .tekstbox{
